@@ -116,10 +116,24 @@ form .btn {
     filter: hue-rotate(0deg);
   }
   100% {
-    filter: hue-rotate(50deg);
+    filter: hue-rotate(360deg);
   }
 }
 
 #text {
   display: none;
+}
+
+.hype {
+  background-image: url(https://i.ibb.co/swmYNV7/ni-o-bailando.webp);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px yellow;
+  animation: anim 1s infinite;
 }

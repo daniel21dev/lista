@@ -39,6 +39,7 @@ const borrarTarea = tareaID => {
 
 const toggleTarea = tareaID => {
     tareas.forEach( tarea => tarea.id == tareaID ? tarea.done = !tarea.done : tarea );
+    celebrate();
 }
 
 
@@ -65,4 +66,14 @@ function setFecha(){
     const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 
     fecha.innerText = `${dias[hoy.getDay()]} ${hoy.getDay()+1} de ${meses[hoy.getMonth()]} del ${hoy.getFullYear()}`
+}
+
+function celebrate(){
+    const toast = document.createElement('div');
+    toast.classList.add('hype');
+    document.body.appendChild(toast);
+
+    setInterval(()=>{
+        document.body.removeChild(toast);
+    }, 3000)
 }
