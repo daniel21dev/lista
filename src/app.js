@@ -62,10 +62,10 @@ const actualizarTareas = () =>{
 
 function setFecha(){
     const hoy = new Date();
-    const dias = ['lunes','martes','miercoles','jueves','sabado','domingo'];
+    const dias = ['lunes','martes','miercoles','jueves','viernes','sabado','domingo'];
     const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 
-    fecha.innerText = `${dias[hoy.getDay()]} ${hoy.getDay()+1} de ${meses[hoy.getMonth()]} del ${hoy.getFullYear()}`
+    fecha.innerText = `${dias[hoy.getDay()+1]} ${meses[hoy.getMonth()]} del ${hoy.getFullYear()}`
 }
 
 function celebrate(){
