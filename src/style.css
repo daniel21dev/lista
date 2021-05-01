@@ -1,0 +1,125 @@
+*,
+*::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 0;
+
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+}
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1619735497594-d286fd8d2d39?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-info {
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+  text-shadow: 0 0 10px black;
+}
+.hero-info h1 {
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 600px;
+  }
+}
+
+.nueva-tarea {
+  margin: 0;
+  padding: 0.5rem 2rem;
+  background: linear-gradient(to right, #00f260, #0575e6);
+}
+
+.nueva-tarea h2 {
+  text-align: center;
+  color: white;
+}
+
+form {
+  margin: 1rem 0;
+}
+
+.nueva-tarea input[type="text"] {
+  width: 80%;
+  padding: 5px;
+}
+
+.btn {
+  padding: 6px;
+  color: white;
+  border: none;
+  border-radius: 1px;
+  box-shadow: 0 0 5px gray;
+}
+
+.btn:hover {
+  cursor: pointer;
+  animation: anim 2s infinite linear;
+}
+
+form .btn {
+  background-color: #00f260;
+  width: 19%;
+}
+
+.tarea {
+  width: 100%;
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+
+  border-bottom: 2px solid gray;
+}
+
+.desc {
+  width: 80%;
+}
+
+.done {
+  background: linear-gradient(to right, #00f260, transparent);
+}
+.done p {
+  text-decoration: line-through;
+}
+.options {
+  width: 20%;
+}
+
+.options .btn {
+  width: 48%;
+  background-color: #0575e6;
+}
+.options .btn:nth-child(2) {
+  background-color: red;
+}
+@keyframes anim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(50deg);
+  }
+}
+
+#text {
+  display: none;
+}
